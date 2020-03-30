@@ -22,10 +22,9 @@ RUN cabal user-config update; \
 # ~~~~~~~~~~~~~~~~~~~
 RUN mkdir build; \
     cd build; \
-    git clone https://gitlab.haskell.org/Gertjan423/ghc.git; \
+    git clone https://gitlab.haskell.org/ghc/ghc.git; \
     cd ghc; \
-    git checkout -b wip/T16393; \
-    git pull origin wip/T16393; \
+    git checkout -b "wip/T17775" "origin/wip/T17775"; \
     git submodule update --init
 
 WORKDIR "build/ghc"
