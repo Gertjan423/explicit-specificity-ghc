@@ -33,7 +33,7 @@ WORKDIR "build/ghc"
 # ~~~~~~~~~~~~
 RUN ./boot && ./configure
 
-RUN hadrian/build -j
+RUN hadrian/build -j --docs=none
 
 # Running GHC
 # ~~~~~~~~~~~
